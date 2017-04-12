@@ -1,5 +1,5 @@
 # The Test
-Here we'll try to simulate a "real sprint" that you'll, probably, be assigned while working as intern at Umanni.
+Here we'll try to simulate a "real sprint" that you'll be assigned while working as intern at Umanni.
 # The Task
 - Create a blog with auth in Ruby on rails Framework.
 - [blog reference - watch the video](http://rubyonrails.org/)
