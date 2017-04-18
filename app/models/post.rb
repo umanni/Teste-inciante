@@ -10,4 +10,5 @@ class Post < ApplicationRecord
 		"Published #{created_at.strftime('%-b %-d, %-Y')}"
 	end
 
+	belongs_to :user
 end
