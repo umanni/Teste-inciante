@@ -4,12 +4,24 @@
   	<img class="img-responsive" src="<%= post.banner_image_url %>" alt="image">
   	</div>
     <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
       <h3 class="text-center"><%= link_to post.title, post %></h3>
       <small><p class="text-center">
         <%= post.display_day_published %> |  <%= post.user.email %>
       </p></small>
       <p><%= truncate(post.description, length: 200) %></p>
-      <%= link_to 'Read more', post, class:'btn btn-primary pull-right'%>
+        <%= link_to 'Read more', post, class:'btn btn-primary pull-right'%>
+      </div>
+    </div>
+
+      <% if user_signed_in? && current_user == post.user %>
+        <%= link_to 'Edit', edit_post_path(post), class:'btn btn-primary' %>
+        <%= link_to "Delete", post_path(post), method: :delete, 
+        data: { confirm: "Are you sure you want to delete this post?" }, 
+        class: "btn btn-danger btn-space" %>
+      <% end %>
+
   </div>
 </div>
 </div>
