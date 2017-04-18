@@ -3,7 +3,7 @@
 <div class="card">
 	<div class="col-md-10 col-md-offset-2 col-lg-8 col-lg-offset-2">
 		<h1 class="text-center"><%= @post.title %></h1>
-		<p class="text-center"><small>Published Apr 17, 2017</small></p>
+		<p class="text-center"><small><%= @post.display_day_published %></small></p>
 		<p class="text-justify"><%= @post.body %></p>
 		<div class="col-md-offset-8 col-lg-offset-8">
 			<%= link_to 'Edit', edit_post_path(@post), class:'btn btn-primary' %> |
