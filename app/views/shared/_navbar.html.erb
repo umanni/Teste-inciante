@@ -24,6 +24,11 @@
           <li>
             <%= link_to "Sign in", new_user_session_path %>
           </li>
+          <% if user_signed_in? %> 
+            <p class="navbar-text">
+              Signed in as <%= "#{current_user.email}" %> 
+            </p>
+          <% end %>
         <% end %>
       </ul>
     </div>
