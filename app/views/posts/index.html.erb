@@ -1,5 +1,7 @@
 <% provide(:page_title, 'All Posts') %>
-
+  <% if user_signed_in? %>
+	<%= link_to "New Post", new_post_path, class: "btn btn-info btn-lg bnt-block", id: "new-post-btn" %>
+  <% end %>
 <div class="row">
   <%= render @posts %>
 </div>
