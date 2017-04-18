@@ -1,8 +1,14 @@
 <% provide(:page_title, "Edit #{@post.title}") %>
 
-<h1>Editing Post</h1>
+<div class="card">
 
-<%= render 'form', post: @post %>
+	<h1>Editing Post</h1>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+	<%= render 'form', post: @post %>
+
+	<%= link_to 'Show', @post %> |
+	<%= link_to 'Back', posts_path %>
+
+</div>
+
+

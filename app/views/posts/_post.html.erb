@@ -1,0 +1,10 @@
+<div class='col-sm-6 col-lg-4'>
+  <div class="card">
+    <div class="container-fluid">
+      <h3 class="text-center"><%= link_to post.title, post %></h3>
+      <small><p class="text-center">Published Apr 17, 2017</p></small>
+      <p><%= truncate(post.description, length: 200) %></p>
+      <%= link_to 'Read more', post, class:'btn btn-primary pull-right'%>
+  </div>
+</div>
+</div>
