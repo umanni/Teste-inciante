@@ -11,6 +11,9 @@
   <body>
   	<%= render 'shared/navbar' %>
   	<div class="container" <%= controller_name %> <%= action_name %> >
+      <% flash.each do |key, message| %>
+        <%= message %>
+      <% end %>
     	<%= yield %>
   	</div>
   </body>
