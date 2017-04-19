@@ -10,10 +10,16 @@
 
   <body>
   	<%= render 'shared/navbar' %>
-  	<div class="container" <%= controller_name %> <%= action_name %> >
-      <% flash.each do |key, message| %>
+    
+    <div class="col-md-12">
+    <% flash.each do |key, message| %>
+      <div class="alert alert-<%= key == 'notice'? 'success': 'danger' %>">
         <%= message %>
-      <% end %>
+      </div>
+    <% end %>
+    </div>
+
+  	<div class="container" <%= controller_name %> <%= action_name %> >
     	<%= yield %>
   	</div>
   </body>
