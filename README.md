@@ -40,4 +40,4 @@ Alternatively, you can also choose to follow the steps bellow.
 
     `rails server`
 
-- visit http://localhost:3000/contact-me
+- visit http://localhost:3000
