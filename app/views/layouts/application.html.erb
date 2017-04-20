@@ -6,11 +6,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% unless %>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <% end%>
+
   </head>
 
   <body>
   	<%= render 'shared/navbar' %>
-    
+
+    <%= render 'posts/modal' unless user_signed_in?  %> 
+        
     <div class="col-md-12">
     <% flash.each do |key, message| %>
       <div class="alert alert-<%= key == 'notice'? 'success': 'danger' %>">

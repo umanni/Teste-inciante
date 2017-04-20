@@ -33,6 +33,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 gem 'bootstrap-material-design'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'

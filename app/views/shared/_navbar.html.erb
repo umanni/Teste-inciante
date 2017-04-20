@@ -1,4 +1,4 @@
-<div class="navbar navbar-default">
+<div class="navbar navbar-default navbar-fixed">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
@@ -11,21 +11,21 @@
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <%= link_to 'Home', root_path%>
+          <%= link_to '<i class="fa fa-home" aria-hidden="true"></i> Home'.html_safe, root_path%>
         </li>
         <% if user_signed_in? %>
           <p class="navbar-text">
               Signed in as <%= "#{current_user.email}" %> 
           </p>
           <li>
-            <%= link_to "Sign out", destroy_user_session_path, method: :delete %> 
+            <%= link_to '<i class="fa fa-sign-out" aria-hidden="true"></i> Sign out'.html_safe, destroy_user_session_path, method: :delete %> 
           </li>
           <% else %>
           <li>
-            <%= link_to "Sign up", new_user_registration_path %>
+            <%= link_to 'Sign up', new_user_registration_path %>
           </li> 
           <li>
-            <%= link_to "Sign in", new_user_session_path %>
+            <%= link_to '<i class="fa fa-sign-in" aria-hidden="true"></i> Sign in'.html_safe, new_user_session_path %>
           </li>
         <% end %>
       </ul>

@@ -21,7 +21,7 @@ RSpec.feature "Logged User Features" do
     fill_in "post[description]", with: "Lorem Ipsum"
 
 
-    click_button "Create Post"
+    click_button "Send"
     
     expect(Post.last.user).to eq(@bruno)
     expect(page).to have_content("Post was successfully created.")
@@ -39,7 +39,7 @@ RSpec.feature "Logged User Features" do
     fill_in "post[banner_image_url]", with: ""
     fill_in "post[description]", with: ""
     
-    click_button "Create Post"
+    click_button "Send"
     
     expect(page).to have_content("4 errors prohibited this post from being saved:")
     expect(page).to have_content("Title can't be blank")
@@ -62,7 +62,7 @@ RSpec.feature "Logged User Features" do
     fill_in "post[banner_image_url]", with: "http://lorempixel.com/400/200/"
     fill_in "post[description]", with: "Lorem Ipsum"
     
-    click_button "Update Post"
+    click_button "Send"
 
     expect(page).to have_content("Post was successfully updated.")
   end

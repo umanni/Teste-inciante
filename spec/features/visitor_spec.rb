@@ -25,7 +25,7 @@ RSpec.feature "Visitor Features" do
 
   scenario "- As a visitor, I can register myself as a User to create posts" do
     visit "/"
-    click_link "Sign up"
+    first(:link, "Sign up").click
     fill_in "Email", with: "user@example.com"
     fill_in "Password", with: "password"
     fill_in "Password confirmation", with: "password"
