@@ -20,7 +20,7 @@ The following requirements are mandatory. Not doing one of them will invalidate 
 - You must write down a README in English explaining how to build and run your app.
 - You must use action cable to update some realtime related stuff as the video shows. (comments on post)
 - You must write at least one test.
-- You must use raisl 5.
+- You must use rails >= 5.
 - You must use devise to authenticate Users.
 - And, of course, if you're doing this test, we assume that you have knowledge of git/github.
 # What we're expecting to see:
