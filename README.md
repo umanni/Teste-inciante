@@ -16,7 +16,7 @@ Here we'll try to simulate a "real sprint" that you'll be assigned while working
 - Your deadline is 1 week after receiving this test. 
 # The Rules
 The following requirements are mandatory. Not doing one of them will invalidate your submission:
-- You must create a FORK to work on your submission - DO NOT COMMIT ON MASTER.
+- You must create a NEW REPO to work on your submission - DO NOT FORK.
 - You must write down a README in English explaining how to build and run your app.
 - You must use action cable to update some realtime related stuff as the video shows. (comments on post)
 - You must write at least one test.
